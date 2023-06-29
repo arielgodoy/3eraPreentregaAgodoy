@@ -8,4 +8,5 @@ urlpatterns = [
     path('update-Docs/<int:id>', views.updateDocs, name='updateDocs'),
     path('delete-Docs/<int:id>', views.deleteDocs, name='deleteDocs'),
     path('buscar-Docs/', views.buscarDocs, name='buscarDocs'),
+    
 ]

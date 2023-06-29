@@ -7,3 +7,4 @@ class Documento(models.Model):
     descripcion = models.CharField(db_column='descripcion', max_length=100, blank=False)
     autor = models.CharField(db_column='autor', max_length=100, blank=False)
     anio = models.IntegerField(db_column='anio',blank=False, default=2000)
+    
