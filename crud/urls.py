@@ -7,5 +7,5 @@ urlpatterns = [
     path('crea-Docs/', views.creaDocs, name='creaDocs'),
     path('update-Docs/<int:id>', views.updateDocs, name='updateDocs'),
     path('delete-Docs/<int:id>', views.deleteDocs, name='deleteDocs'),
-    path('buscar-Docs/<name>', views.buscarDocs, name='buscarDocs'),
+    path('buscar-Docs/', views.buscarDocs, name='buscarDocs'),
 ]

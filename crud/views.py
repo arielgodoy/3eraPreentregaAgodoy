@@ -1,14 +1,20 @@
 from django.shortcuts import render, redirect
 from .models import Documento
-from .forms import DocForm
+from .forms import DocForm, BuscaDocs
 
 # Create your views here.
 def inicio(request):   
     return render(request,"base.html")  
 
-def buscarDocs(request, name):
-    docs = Documento.objects.filter(titulo = name)
-    return render(request,"listadocs.html",{'docs':docs}) 
+def buscarDocs(request):
+    form = BuscaDocs(request.GET)
+    if form.is_valid():
+        filtro = form.cleaned_data['titulo']        
+        docs = Documento.objects.filter(titulo__icontains=filtro)        
+    else:
+        print("No es Valido ")    
+    return render(request,"listadocs.html",{'form':form,'docs':docs}) 
+
 
 
 def listarDocs(request):  
