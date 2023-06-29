@@ -3,6 +3,14 @@ from .models import Documento
 from .forms import DocForm
 
 # Create your views here.
+def inicio(request):   
+    return render(request,"base.html")  
+
+def buscarDocs(request, name):
+    docs = Documento.objects.filter(titulo = name)
+    return render(request,"listadocs.html",{'docs':docs}) 
+
+
 def listarDocs(request):  
     docs = Documento.objects.all()  
     return render(request,"listadocs.html",{'docs':docs})  
