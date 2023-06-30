@@ -24,28 +24,27 @@
                     Modelo1 (Documentos)
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">Crear</a></li>
-                    <li><a class="dropdown-item" href="{%url 'buscarDocs' %}">Listar</a></li>
-                    <li><a class="dropdown-item" href="{%url 'buscarDocs' %}">Buscar</a></li>
+                    <li><a class="dropdown-item" href="{%url 'creaDocs' %}">Crear</a></li>
+                    <li><a class="dropdown-item" href="{%url 'listarDocs' %}">Listar</a></li>   
                   </ul>
               </li>      
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Modelo2 (Propietarios)
                   </a>
-
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">Crear</a></li>
-                    <li><a class="dropdown-item" href="{%url 'listarDocs' %}">Listar</a></li>
+                    <li><a class="dropdown-item" href="{%url 'listarPropietarios' %}">Crear</a></li>
+                    <li><a class="dropdown-item" href="{%url 'listarPropietarios' %}">Listar</a></li>   
                   </ul>
+
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Modelo3 (Propiedades)
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">Crear</a></li>
-                    <li><a class="dropdown-item" href="{%url 'listarDocs' %}">Listar</a></li>
+                    <li><a class="dropdown-item" href="{%url 'creaPropiedades' %}">Crear</a></li>
+                    <li><a class="dropdown-item" href="{%url 'listarPropiedades' %}">Listar</a></li>   
                   </ul>
               </li>
                           
@@ -57,6 +56,9 @@
 <body>
     
     {% block content %}
+    <div class="container">
+    <h1>Pre entrega 3 - Comisión 43855 Python-CoderHouse Junio-2023    </h1>
+    </div>
     {% endblock %}
     
 </body>
